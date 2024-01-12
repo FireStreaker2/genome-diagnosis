@@ -1,2 +1,2 @@
-# genome-diagnosis
+# medication-app
 Hackathon entry for ipc 
