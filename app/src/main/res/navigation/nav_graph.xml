@@ -14,6 +14,11 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+
+        <!-- development -->
+        <action
+            android:id="@+id/action_FirstFragment_to_Reminders"
+            app:destination="@id/Reminders" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -24,5 +29,11 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Reminders"
+        android:name="com.medicationapp.Reminders"
+        android:label="@string/reminders_title"
+        tools:layout="@layout/reminders">
     </fragment>
 </navigation>
