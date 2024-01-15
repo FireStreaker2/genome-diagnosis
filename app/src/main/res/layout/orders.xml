@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Reminders">
+    tools:context=".Orders">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -24,15 +24,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:gravity="center"
-                android:text="@string/reminders_title"
+                android:text="@string/orders_title"
                 android:textSize="36sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <!-- empty container for reminders -->
+            <!-- empty container for orders -->
             <LinearLayout
-                android:id="@+id/reminder_container"
+                android:id="@+id/orders_container"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_margin="56dp"

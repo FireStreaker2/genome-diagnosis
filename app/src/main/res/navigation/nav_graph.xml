@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_perscriptions"
             app:destination="@id/perscriptions3" />
+        <action
+            android:id="@+id/action_FirstFragment_to_Orders"
+            app:destination="@id/Orders" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -46,7 +49,14 @@
         android:id="@+id/perscriptions3"
         android:name="com.medicationapp.Prescriptions"
         android:label="Perscriptions"
-        tools:layout="@layout/perscriptions"
+        tools:layout="@layout/prescriptions"
         />
+    <fragment
+        android:id="@+id/Orders"
+        android:name="com.medicationapp.Orders"
+        android:label="@string/orders_title"
+        tools:layout="@layout/orders">
+    </fragment>
+
 
 </navigation>

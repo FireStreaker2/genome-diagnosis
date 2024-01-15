@@ -16,6 +16,7 @@
     <string name="title">Medication App</string>
     <string name="reminders_title">Reminders</string>
     <string name="reminder_title">Reminders Today</string>
+    <string name="orders_title">Orders</string>
     <string name="prescription_title">Your Prescriptions</string>
 
     <!-- misc -->

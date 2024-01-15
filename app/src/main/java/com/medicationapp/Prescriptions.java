@@ -10,13 +10,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.medicationapp.databinding.PerscriptionsBinding;
+import com.medicationapp.databinding.PrescriptionsBinding;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Prescriptions extends Fragment {
-    private PerscriptionsBinding binding;
+    private PrescriptionsBinding binding;
 
     @Override
     public View onCreateView(
@@ -24,30 +24,32 @@ public class Prescriptions extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = PerscriptionsBinding.inflate(inflater, container, false);
+        binding = PrescriptionsBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
-        HashMap<String,String> patientToPrescription = new HashMap<String, String>();
-        patientToPrescription.put("bob","funny mushrooms");
-        patientToPrescription.put("joe","unfunny mushrooms");
-        super.onViewCreated(view, savedInstanceState);
-        LinearLayout testLayout = (LinearLayout) view.findViewById(R.id.prescriptionsHolder);
 
-        for (Map.Entry<String, String> set :
-                patientToPrescription.entrySet()) {
+        // development placeholders
+        HashMap<String, String> patientToPrescription = new HashMap<>();
+        patientToPrescription.put("bob", "funny mushrooms");
+        patientToPrescription.put("joe", "unfunny mushrooms");
+
+
+        super.onViewCreated(view, savedInstanceState);
+        LinearLayout testLayout = view.findViewById(R.id.prescriptionsHolder);
+
+        for (Map.Entry<String, String> set : patientToPrescription.entrySet()) {
             TextView text = new TextView(getContext());
             text.setTextSize(20);
-            text.setText(set.getKey()+": "+set.getValue());
+            text.setText(set.getKey() + ": " + set.getValue()); // TODO: fix this so it doesnt throw a warning
             testLayout.addView(text);
-
         }
-        return binding.getRoot();
 
+        return binding.getRoot();
     }
 
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding=null;
+        binding = null;
     }
 }
