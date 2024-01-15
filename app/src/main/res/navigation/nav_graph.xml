@@ -19,6 +19,12 @@
         <action
             android:id="@+id/action_FirstFragment_to_Reminders"
             app:destination="@id/Reminders" />
+        <action
+            android:id="@+id/action_FirstFragment_self"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_perscriptions"
+            app:destination="@id/perscriptions3" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -36,4 +42,11 @@
         android:label="@string/reminders_title"
         tools:layout="@layout/reminders">
     </fragment>
+    <fragment
+        android:id="@+id/perscriptions3"
+        android:name="com.medicationapp.Prescriptions"
+        android:label="Perscriptions"
+        tools:layout="@layout/perscriptions"
+        />
+
 </navigation>
