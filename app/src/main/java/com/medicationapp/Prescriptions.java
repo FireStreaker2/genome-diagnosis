@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.medicationapp.databinding.PrescriptionsBinding;
 
@@ -39,7 +40,10 @@ public class Prescriptions extends Fragment {
         for (Map.Entry<String, String> set : patientToPrescription.entrySet()) {
             TextView text = new TextView(getContext());
             text.setTextSize(20);
+
             text.setText(set.getKey() + ": " + set.getValue()); // TODO: fix this so it doesnt throw a warning
+            text.setOnClickListener(view13 -> NavHostFragment.findNavController(Prescriptions.this)
+                    .navigate(R.id.action_perscriptions3_to_prescriptions_descriptions));
             testLayout.addView(text);
         }
 
