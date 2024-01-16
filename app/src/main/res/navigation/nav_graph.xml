@@ -9,6 +9,7 @@
         android:id="@+id/FirstFragment"
         android:name="com.medicationapp.FirstFragment"
         android:label="@string/first_fragment_label"
+<<<<<<< Updated upstream
         tools:layout="@layout/fragment_first">
 
         <action
@@ -59,4 +60,7 @@
     </fragment>
 
 
+=======
+        tools:layout="@layout/fragment_first"/>
+>>>>>>> Stashed changes
 </navigation>

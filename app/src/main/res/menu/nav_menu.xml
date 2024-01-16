@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/nav_ill"
+            android:icon="@drawable/illness"
+            android:title="@string/ill_cond" />
+
+        <item
+            android:id="@+id/nav_meds"
+            android:icon="@drawable/medication"
+            android:title="@string/curr_meds" />
+
+        <item
+            android:id="@+id/nav_prescriptions"
+            android:icon="@drawable/prescription"
+            android:title="@string/prescriptions" />
+
+        <item
+            android:id="@+id/nav_reminders"
+            android:icon="@drawable/reminders"
+            android:title="@string/reminders" />
+
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/orders"
+            android:title="@string/orders" />
+
+        <item
+            android:id="@+id/nav_appointments"
+            android:icon="@drawable/appointment"
+            android:title="@string/appointments" />
+
+    </group>
+
+    <item android:title="">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/profile"
+                android:title="@string/profile" />
+
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/settings"
+                android:title="@string/settings" />
+
+            <item
+                android:id="@+id/nav_data"
+                android:icon="@drawable/data"
+                android:title="@string/data" />
+
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/help"
+                android:title="@string/help" />
+
+        </menu>
+    </item>
+
+</menu>

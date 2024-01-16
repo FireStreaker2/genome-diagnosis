@@ -1,6 +1,6 @@
 <resources>
     <!-- main -->
-    <string name="app_name">Medication App</string>
+    <string name="app_name">Medication</string>
     <string name="action_settings">Settings</string>
     <string name="action_info">Info</string>
     <string name="action_tos">Terms and Conditions</string>
@@ -11,6 +11,20 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Placeholder button, will remove later</string>
     <string name="previous">Previous</string>
+
+    <!-- nav menu -->
+    <string name="home">Home</string>
+    <string name="ill_cond">Illnesses/Conditions</string>
+    <string name="curr_meds">Current Medication</string>
+    <string name="prescriptions">Prescriptions</string>
+    <string name="reminders">Reminders</string>
+    <string name="orders">Orders</string>
+    <string name="appointments">Appointments</string>
+
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="data">Your Data</string>
+    <string name="help">Help</string>
 
     <!-- titles -->
     <string name="title">Medication App</string>
