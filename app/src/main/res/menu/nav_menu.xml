@@ -40,33 +40,38 @@
             android:icon="@drawable/appointment"
             android:title="@string/appointments" />
 
+        <item
+            android:id="@+id/nav_data"
+            android:icon="@drawable/data"
+            android:title="@string/data" />
+
     </group>
 
     <item android:title="">
 
         <menu>
 
-            <item
-                android:id="@+id/nav_profile"
-                android:icon="@drawable/profile"
-                android:title="@string/profile" />
+            <group android:checkableBehavior="single">
 
-            <item
-                android:id="@+id/nav_settings"
-                android:icon="@drawable/settings"
-                android:title="@string/settings" />
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/profile"
+                    android:title="@string/profile" />
 
-            <item
-                android:id="@+id/nav_data"
-                android:icon="@drawable/data"
-                android:title="@string/data" />
+                <item
+                    android:id="@+id/nav_settings"
+                    android:icon="@drawable/settings"
+                    android:title="@string/settings" />
 
-            <item
-                android:id="@+id/nav_help"
-                android:icon="@drawable/help"
-                android:title="@string/help" />
+                <item
+                    android:id="@+id/nav_help"
+                    android:icon="@drawable/help"
+                    android:title="@string/help" />
+
+            </group>
 
         </menu>
+
     </item>
 
 </menu>
