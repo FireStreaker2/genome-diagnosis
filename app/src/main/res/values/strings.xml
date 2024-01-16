@@ -35,7 +35,8 @@
     <string name="reminder_title">Reminders Today</string>
     <string name="orders_title">Orders</string>
     <string name="prescription_title">Your Prescriptions</string>
-
+    <!-- prescription strings -->
+    <string name="add_prescription_button">Add New Prescription</string>
     <!-- misc -->
     <string name="placeholder">insert graph here</string>
     <string name="reminder_placeholder">go outside to improve mental health</string>
