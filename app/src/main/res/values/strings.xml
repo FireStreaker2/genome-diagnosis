@@ -9,12 +9,15 @@
     <!-- nav fragments -->
     <string name="first_fragment_label">Home</string>
     <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
+    <string name="next">Placeholder button, will remove later</string>
     <string name="previous">Previous</string>
 
     <!-- titles -->
     <string name="title">Medication App</string>
+    <string name="reminders_title">Reminders</string>
     <string name="reminder_title">Reminders Today</string>
+    <string name="orders_title">Orders</string>
+    <string name="prescription_title">Your Prescriptions</string>
 
     <!-- misc -->
     <string name="placeholder">insert graph here</string>
