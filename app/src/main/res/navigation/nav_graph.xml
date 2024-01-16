@@ -9,12 +9,9 @@
         android:id="@+id/FirstFragment"
         android:name="com.medicationapp.FirstFragment"
         android:label="@string/first_fragment_label"
-<<<<<<< Updated upstream
         tools:layout="@layout/fragment_first">
 
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+
 
         <!-- development -->
         <action
@@ -30,16 +27,7 @@
             android:id="@+id/action_FirstFragment_to_Orders"
             app:destination="@id/Orders" />
     </fragment>
-    <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.medicationapp.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
     <fragment
         android:id="@+id/Reminders"
         android:name="com.medicationapp.Reminders"
@@ -51,16 +39,25 @@
         android:name="com.medicationapp.Prescriptions"
         android:label="Perscriptions"
         tools:layout="@layout/prescriptions"
-        />
+        >
+        <action
+            android:id="@+id/action_perscriptions3_to_prescriptions_descriptions"
+            app:destination="@id/prescriptions_descriptions" />
+    </fragment>
     <fragment
         android:id="@+id/Orders"
         android:name="com.medicationapp.Orders"
         android:label="@string/orders_title"
         tools:layout="@layout/orders">
+
     </fragment>
+    <fragment
+        android:id="@+id/prescriptions_descriptions"
+        android:name="com.medicationapp.Prescriptions_descriptions"
+        android:label="Prescriptions_descriptions"
+        tools:layout="@layout/prescriptions_descriptions"
+        />
 
 
-=======
-        tools:layout="@layout/fragment_first"/>
->>>>>>> Stashed changes
+
 </navigation>
