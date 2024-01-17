@@ -19,6 +19,11 @@ public class Home extends Fragment {
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
+        // Example usage of scheduling a new notification (i used this for development)
+//        long notificationTimeMillis = System.currentTimeMillis() + 2000;
+//        Notification notification = new Notification(requireContext(), notificationTimeMillis, "test title", "take your meds");
+//        notification.initialize(getActivity());
+
         binding = HomeBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
