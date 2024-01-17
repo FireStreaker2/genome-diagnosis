@@ -2,17 +2,20 @@ package com.medicationapp;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -27,6 +30,7 @@ public class Prescriptions extends Fragment {
     private PrescriptionsBinding binding;
     private static final int REQUEST_CAMERA_PERMISSION_CODE = 1;
     private static final int REQUEST_IMAGE_CAPTURE = 2;
+    private static final int RESULT_OK = -1;
     Button takePhoto;
     @Override
     public View onCreateView(
@@ -44,8 +48,7 @@ public class Prescriptions extends Fragment {
         });
         // development placeholders
         HashMap<String, String> patientToPrescription = new HashMap<>();
-        patientToPrescription.put("bob", "funny mushrooms");
-        patientToPrescription.put("joe", "unfunny mushrooms");
+
 
 
         super.onViewCreated(view, savedInstanceState);
@@ -73,7 +76,20 @@ public class Prescriptions extends Fragment {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent,REQUEST_IMAGE_CAPTURE);
     }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
+        super.onActivityResult(requestCode,resultCode,data);
+        if(requestCode==REQUEST_IMAGE_CAPTURE&&resultCode==RESULT_OK){
+            // get the captured image as bitmap
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            ImageView newPrescription = new ImageView(getContext());
+            newPrescription.setImageBitmap(imageBitmap);
+            LinearLayout prescriptionsLayout = binding.getRoot().findViewById(R.id.prescriptionsHolder);
+            prescriptionsLayout.addView(newPrescription);
 
+        }
+    }
     @Override
     public void onDestroyView() {
         super.onDestroyView();
