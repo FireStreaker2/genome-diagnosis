@@ -15,6 +15,7 @@ import java.util.Random;
 /**
  * Example usage:
  * send notification one second after initializing
+ * -----------------------------------------------
  * long notificationTimeMillis = System.currentTimeMillis() + 1000;
  * Notification notification = new Notification(requireContext(), notificationTimeMillis, "test title", "take your meds");
  * notification.initialize();
@@ -44,7 +45,7 @@ public class Notification {
      * Initializes the notification and starts it
      * logic in a different method because of conventions
      */
-    public void initialize(Activity activity) {
+    public void initialize() {
         // intents for the notification
         Intent intent = new Intent(this.context, Activity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
