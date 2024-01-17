@@ -1,6 +1,7 @@
 package com.medicationapp;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,7 +44,7 @@ public class Reminders extends Fragment {
             LinearLayout layout = new LinearLayout(requireContext());
             layout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1));
             layout.setOrientation(LinearLayout.VERTICAL);
-
+            layout.setGravity(Gravity.CENTER);
             TextView title = new TextView(requireContext());
             title.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             title.setText(i);

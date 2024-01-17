@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".Home">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -30,7 +30,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -38,20 +37,14 @@
                 android:background="@drawable/border"
                 android:orientation="vertical">
 
-                <!-- TODO: replace this with a graph representing medication(?) -->
-                <TextView
-                    android:id="@+id/placeholder"
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/graph"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="@string/placeholder"
-                    android:textSize="36sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:layout_height="192dp" />
             </LinearLayout>
 
             <LinearLayout
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -59,39 +52,19 @@
                 android:padding="5dp">
 
                 <TextView
+                    android:gravity="center"
                     android:id="@+id/textview_second"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/reminder_title"
                     android:textSize="20sp"
-
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
+                    />
                 <!-- TODO: programmatically load reminders from a local variable. this will just be used as a placeholder, actual logic will be in java -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/reminder_placeholder" />
             </LinearLayout>
-
-            <!-- development buttons, will remove later -->
-            <Button
-                android:id="@+id/button_first"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/next" />
-            <Button
-                android:id="@+id/button_second"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/next" />
-            <Button
-                android:id="@+id/button_third"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/next" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
